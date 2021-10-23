@@ -1,0 +1,24 @@
+<button
+  class="btn btn-outline-success me-2"
+  routerLink="/series/new">
+  AJOUTER
+</button>
+<table class="table">
+  <thead class="table-dark">
+  <tr>
+    <th>ID</th>
+    <th>Nom</th>
+    <th>Date du 1er épisode</th>
+    <th>Action</th>
+  </tr>
+
+  </thead>
+  <tbody>
+  <tr app-series-table-line
+      *ngFor="let serie of series"
+      [id]="serie.id"
+      [name]="serie.name"
+      [dateBeginFirstSeason]="serie.dateBeginFirstSeason">s
+  </tr>
+  </tbody>
+</table>

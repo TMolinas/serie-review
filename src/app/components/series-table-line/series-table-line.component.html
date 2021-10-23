@@ -1,0 +1,23 @@
+<td>{{id}}</td>
+<td>{{name}}</td>
+<td>{{dateBeginString}}</td>
+<td class="d-flex justify-content-between">
+
+  <div>
+    <button
+      [routerLink]="['/series', id]"
+      class="btn btn-primary me-2">
+      DETAILS
+    </button>
+    <button
+      [routerLink]="['/series', id, 'edit']"
+      class="btn btn-outline-warning me-2">
+      ÉDITER
+    </button>
+    <button
+      (click)="onClickDeleteSerie()"
+      class="btn btn-outline-danger">
+      SUPPR.
+    </button>
+  </div>
+</td>
